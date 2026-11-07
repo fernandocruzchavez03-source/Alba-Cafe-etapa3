@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="robots" content="noindex, nofollow">
+  <meta
+    name="description"
+    content="Propuesta de sitio web para Alba Café en Linda Vista, Guadalupe."
+  >
+  <title>Inicio | Alba Café</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script>
+  const ALBA_URL='https://gzuqhxvvpmwvthrhvqhe.supabase.co', ALBA_KEY='sb_publishable_9wsVFK6VFJ9WJowgJRNxOw_kr9SW0qR';
+    (() => {
+      let saved = null;
+      try {
+        saved = localStorage.getItem("alba-theme");
+      } catch {}
+
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      document.documentElement.dataset.theme =
+        saved === "dark" || saved === "light"
+          ? saved
+          : dark ? "dark" : "light";
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="demo-note">
+    Propuesta de diseño · Sitio no oficial
+  </div>
+
+  <!-- ENCABEZADO -->
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#inicio" aria-label="Alba Café, inicio">
+        <span class="logo-frame">
+          <img src="alba-logo.png" alt="Alba Café" width="1672" height="941">
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#inicio" data-nav="inicio">Inicio</a>
+        <a href="#menu" data-nav="menu">Menú</a>
+        <a href="#ubicacion" data-nav="ubicacion">Ubicación</a>
+        <a href="#galeria" data-nav="galeria">Galería</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-link" href="#menu">
+          Descubre tu próximo café ↗
+        </a>
+
+        <button
+          class="icon-button theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Activar modo oscuro"
+          title="Activar modo oscuro"
+          hidden
+        >
+          <svg class="moon-icon" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.5 13.3A8.7 8.7 0 0 1 10.7 3.5a8.8 8.8 0 1 0 9.8 9.8Z"></path>
+          </svg>
+
+          <svg class="sun-icon" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button hamburger"
+          id="hamburger"
+          type="button"
+          aria-label="Abrir navegación"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          hidden
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="wrap mobile-menu-inner">
+        <span class="eyebrow">Tu próxima pausa</span>
+
+        <nav aria-label="Navegación móvil">
+          <a href="#inicio" data-nav="inicio">
+            <span>Inicio</span><span aria-hidden="true">01</span>
+          </a>
+          <a href="#menu" data-nav="menu">
+            <span>Menú</span><span aria-hidden="true">02</span>
+          </a>
+          <a href="#ubicacion" data-nav="ubicacion">
+            <span>Ubicación</span><span aria-hidden="true">03</span>
+          </a>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+          <p>Linda Vista · Guadalupe</p>
+          <a
+            href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Cómo llegar ↗</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" hidden></div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- INICIO -->
+
+    <div id="inicio" class="view" data-view tabindex="-1"
+      aria-labelledby="inicio-title">
+
+      <div class="wrap hero">
+        <div>
+          <span class="eyebrow">
+            <span class="small-dot" aria-hidden="true"></span>
+            Linda Vista · Guadalupe
+          </span>
+
+          <h1 id="inicio-title">
+            Tu día merece<br>una <em>buena pausa.</em>
+          </h1>
+
+          <p class="hero-description">
+            Un café caliente, algo refrescante
+            y un momento que se disfruta sin prisa.
+          </p>
+
+          <div class="actions">
+            <a class="button" href="#menu">Explorar el menú ↗</a>
+            <a class="button secondary" href="#ubicacion">
+              Planea tu visita
+            </a>
+          </div>
+
+          <ul class="hero-benefits" aria-label="Opciones del local">
+            <li>Desayunos</li>
+            <li>Para llevar</li>
+            <li>Asientos al aire libre</li>
+          </ul>
+
+          <div class="hero-detail">
+            <span class="detail-line" aria-hidden="true"></span>
+            <span>Bella Vista 207 · Linda Vista</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="coffee-art" role="img"
+            aria-label="Ilustración decorativa de una taza de café">
+            <span class="art-stamp">Una pausa con sabor.</span>
+            <div class="art-orbit" aria-hidden="true"></div>
+            <div class="saucer"><div class="cup"></div></div>
+            <span class="art-label">
+              Café · Conversaciones · Pequeños momentos
+            </span>
+          </div>
+
+          <div class="visual-caption">
+            <span>ALBA CAFÉ</span>
+            <span>Disfruta el momento.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ribbon">
+        <span>Café caliente</span>
+        <span aria-hidden="true">✳</span>
+        <span>Frappés</span>
+        <span aria-hidden="true">✳</span>
+        <span>Café para casa</span>
+      </div>
+
+      <section class="wrap section" aria-labelledby="explora-title">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">A tu manera</span>
+            <h2 id="explora-title">Una pausa.<br>Muchas posibilidades.</h2>
+          </div>
+          <p>
+            Descubre el menú, encuentra lo que se te antoja
+            y planea tu próxima visita.
+          </p>
+        </div>
+
+        <div class="discovery-grid">
+          <a class="discovery-card" href="#menu" data-category-link="calientes">
+            <div class="card-top">
+              <span class="eyebrow">01 · Calientes</span>
+              <span class="round-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="category-art" aria-hidden="true">
+              <span class="steam steam-one"></span>
+              <span class="steam steam-two"></span>
+              <span class="little-cup"></span>
+              <span class="little-saucer"></span>
+            </div>
+            <h3>Tu café de siempre.<br>O tu nuevo favorito.</h3>
+            <p>Espresso, latte, capuchino, matcha y más.</p>
+          </a>
+
+          <a class="discovery-card" href="#menu" data-category-link="frios">
+            <div class="card-top">
+              <span class="eyebrow">02 · Frappés</span>
+              <span class="round-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="category-art" aria-hidden="true">
+              <span class="cold-straw"></span>
+              <span class="cold-glass"></span>
+            </div>
+            <h3>Algo frío.<br>Un buen antojo.</h3>
+            <p>Oreo, moka, capuchino, choco avellana o matcha.</p>
+          </a>
+
+          <a class="discovery-card" href="#menu" data-category-link="cafe">
+            <div class="card-top">
+              <span class="eyebrow">03 · Para casa</span>
+              <span class="round-arrow" aria-hidden="true">↗</span>
+            </div>
+            <div class="category-art" aria-hidden="true">
+              <span class="coffee-bag">
+                <span class="bag-label">
+                  <span class="logo-frame">
+                    <img src="alba-logo.png" alt="" width="1672" height="941">
+                  </span>
+                </span>
+              </span>
+            </div>
+            <h3>La pausa<br>también va contigo.</h3>
+            <p>Presentaciones de 100 g, ¼ kg, ½ kg y 1 kg.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="about section" aria-labelledby="about-title">
+        <div class="wrap about-grid">
+          <div class="brand-card">
+            <span class="brand-overline">UN MOMENTO PARA TI</span>
+            <span class="logo-frame brand-logo">
+              <img src="alba-logo.png" alt="Alba Café" width="1672" height="941">
+            </span>
+            <span class="brand-bottom">Linda Vista · Guadalupe</span>
+          </div>
+
+          <div class="about-copy">
+            <span class="eyebrow">Un espacio para compartir</span>
+            <h2 id="about-title">A solas.<br>O en buena compañía.</h2>
+            <p>
+              Un ambiente informal y relajado para disfrutar
+              tu café, reunirte con amigos o venir en familia.
+            </p>
+            <p>
+              Puedes sentarte dentro, elegir un lugar al aire libre
+              o pedir algo para llevar.
+            </p>
+            <div class="actions">
+              <a class="button" href="#ubicacion">Conoce los servicios ↗</a>
+              <a class="text-link"
+                href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+                target="_blank" rel="noopener noreferrer">Fotos y reseñas ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap visit-invite">
+        <div>
+          <span class="eyebrow">Empieza el día con Alba</span>
+          <h2>Nos vemos desde temprano.</h2>
+          <p>
+            Lunes a viernes desde las 6:00 a.m.
+            y sábados desde las 7:00 a.m.
+          </p>
+        </div>
+        <a class="button secondary" href="#ubicacion">Horarios y ubicación ↗</a>
+      </section>
+    </div>
+
+    <!-- MENÚ -->
+
+    <div id="menu" class="view" data-view tabindex="-1" aria-labelledby="menu-title">
+      <section class="wrap section">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">La carta de Alba</span>
+            <h1 class="page-title" id="menu-title">¿Qué se te <em>antoja?</em></h1>
+          </div>
+          <p>Caliente, frío o para preparar en casa. Encuentra tu próxima pausa.</p>
+        </div>
+
+        <div class="menu-tools" id="menu-tools" hidden>
+          <label class="search-label" for="menu-search">Buscar en el menú</label>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.7" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m16 16 5 5"></path>
+            </svg>
+            <input id="menu-search" class="search-input" type="search"
+              placeholder="Latte, matcha, frappé…" autocomplete="off"
+              aria-controls="menu-grid">
+          </div>
+
+          <div class="filters" role="group" aria-label="Categorías del menú">
+            <button class="filter" type="button" data-filter="todos"
+              aria-pressed="true" aria-controls="menu-grid">Todo</button>
+            <button class="filter" type="button" data-filter="calientes"
+              aria-pressed="false" aria-controls="menu-grid">Calientes</button>
+            <button class="filter" type="button" data-filter="frios"
+              aria-pressed="false" aria-controls="menu-grid">Frappés</button>
+            <button class="filter" type="button" data-filter="cafe"
+              aria-pressed="false" aria-controls="menu-grid">Café para casa</button>
+          </div>
+        </div>
+
+        <div class="menu-meta">
+          <p id="menu-status" class="menu-status"
+            role="status" aria-live="polite" aria-atomic="true">17 productos · Todo</p>
+          <span>Precios en MXN</span>
+        </div>
+
+        <div id="alba-offers" class="alba-offers" aria-live="polite"></div>
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-item" data-category="calientes" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Espresso</h3><p>Bebida caliente</p>
+            </div><span class="price">$40</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Latte</h3><p>Bebida caliente</p>
+            </div><span class="price">$60</span>
+          </article>
+
+          <article class="menu-item" data-category="frios" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Frappés</span>
+              <h3>Frappé de Oreo</h3><p>Bebida fría</p>
+            </div><span class="price">$80</span>
+          </article>
+
+          <article class="menu-item" data-category="frios" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Frappés</span>
+              <h3>Frappé de matcha</h3><p>Bebida fría</p>
+            </div><span class="price">$90</span>
+          </article>
+
+          <article class="menu-item" data-category="cafe" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Para casa</span>
+              <h3>Café · ¼ kg</h3><p>Bolsa de 250 g para llevar</p>
+            </div><span class="price">$150</span>
+          </article>
+
+          <article class="menu-item" data-category="cafe" data-preview>
+            <div class="product-copy">
+              <span class="product-category">Para casa</span>
+              <h3>Café · 1 kg</h3><p>Bolsa de café para llevar</p>
+            </div><span class="price">$490</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Americano espresso</h3><p>Bebida caliente</p>
+            </div><span class="price">$50</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Capuchino</h3><p>Bebida caliente</p>
+            </div><span class="price">$60</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Lechero</h3><p>Bebida caliente</p>
+            </div><span class="price">$60</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Caramel latte</h3><p>Bebida caliente</p>
+            </div><span class="price">$70</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Matcha</h3><p>Bebida caliente</p>
+            </div><span class="price">$80</span>
+          </article>
+
+          <article class="menu-item" data-category="calientes">
+            <div class="product-copy">
+              <span class="product-category">Calientes</span>
+              <h3>Dirty matcha</h3><p>Bebida caliente</p>
+            </div><span class="price">$90</span>
+          </article>
+
+          <article class="menu-item" data-category="frios">
+            <div class="product-copy">
+              <span class="product-category">Frappés</span>
+              <h3>Frappé de moka</h3><p>Bebida fría</p>
+            </div><span class="price">$80</span>
+          </article>
+
+          <article class="menu-item" data-category="frios">
+            <div class="product-copy">
+              <span class="product-category">Frappés</span>
+              <h3>Frappé de capuchino</h3><p>Bebida fría</p>
+            </div><span class="price">$80</span>
+          </article>
+
+          <article class="menu-item" data-category="frios">
+            <div class="product-copy">
+              <span class="product-category">Frappés</span>
+              <h3>Frappé de choco avellana</h3><p>Bebida fría</p>
+            </div><span class="price">$80</span>
+          </article>
+
+          <article class="menu-item" data-category="cafe">
+            <div class="product-copy">
+              <span class="product-category">Para casa</span>
+              <h3>Café · ½ kg</h3><p>Bolsa de 500 g para llevar</p>
+            </div><span class="price">$250</span>
+          </article>
+
+          <article class="menu-item" data-category="cafe">
+            <div class="product-copy">
+              <span class="product-category">Para casa</span>
+              <h3>Café · 100 g</h3><p>Bolsa de café para llevar</p>
+            </div><span class="price">$80</span>
+          </article>
+        </div>
+
+        <div class="menu-more" id="menu-more" hidden>
+          <button class="more-button" id="toggle-products" type="button"
+            aria-expanded="false" aria-controls="menu-grid">
+            <span id="more-label">Ver más productos</span>
+            <span class="more-icon" aria-hidden="true">↓</span>
+          </button>
+          <span class="more-caption" id="more-caption"></span>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="eyebrow">Probemos otra vez</span>
+          <h3>No encontramos ese antojo.</h3>
+          <p>Busca otro nombre o vuelve a explorar el menú.</p>
+          <button class="button" id="reset-menu" type="button">Mostrar todo</button>
+        </div>
+
+        <div class="menu-extra">
+          <div>
+            <span class="eyebrow">Algo más para tu pausa</span>
+            <h3>También hay opciones para comer.</h3>
+            <p>
+              Desayunos, brunch, almuerzo, cena, bocadillos y postres.
+              Consulta las opciones disponibles en el local.
+            </p>
+          </div>
+          <a class="button secondary" href="#ubicacion">Planea tu visita ↗</a>
+        </div>
+
+        <p class="menu-disclaimer">
+          Esta selección corresponde a la parte del menú fotografiada.
+          Precios y disponibilidad pendientes de confirmar con el negocio.
+        </p>
+      </section>
+    </div>
+
+<div id="galeria" class="view" data-view tabindex="-1" aria-labelledby="galeria-title"><section class="wrap section"><div class="section-top"><div><span class="eyebrow">Momentos en Alba</span><h1 class="page-title" id="galeria-title">Nuestra <em>galería.</em></h1></div><p>Fotografías y momentos que compartimos contigo.</p></div><div id="alba-gallery-grid" class="alba-gallery-grid"></div><p id="alba-gallery-status" class="menu-status" role="status">Cargando fotografías…</p></section></div>
+    <!-- UBICACIÓN -->
+
+    <div id="ubicacion" class="view" data-view tabindex="-1"
+      aria-labelledby="ubicacion-title">
+      <section class="wrap section">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">Tu próxima parada</span>
+            <h1 class="page-title" id="ubicacion-title">Nos vemos <em>en Alba.</em></h1>
+          </div>
+          <p>
+            Horarios, ubicación y esos pequeños detalles
+            que ayudan a planear tu visita.
+          </p>
+        </div>
+
+        <div class="location-layout">
+          <div class="location-brand">
+            <span class="logo-frame location-logo">
+              <img src="alba-logo.png" alt="Alba Café" width="1672" height="941">
+            </span>
+
+            <svg class="pin-icon" viewBox="0 0 80 100" fill="none" aria-hidden="true">
+              <path d="M40 91S10 61 10 36a30 30 0 0 1 60 0C70 61 40 91 40 91Z"
+                stroke="currentColor" stroke-width="2"></path>
+              <circle cx="40" cy="36" r="11"
+                stroke="currentColor" stroke-width="2"></circle>
+            </svg>
+
+            <h2>Linda Vista.</h2>
+            <p>Guadalupe, Nuevo León</p>
+            <a class="button light"
+              href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+              target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+          </div>
+
+          <div class="location-information">
+            <div class="location-block">
+              <span class="eyebrow">01 · Dirección</span>
+              <h3>Aquí nos encuentras.</h3>
+              <address>
+                Bella Vista 207, Linda Vista<br>
+                67123 Guadalupe, Nuevo León, México
+              </address>
+            </div>
+
+            <div class="location-block">
+              <span class="eyebrow">02 · Horarios</span>
+              <h3>Haz un espacio en tu día.</h3>
+
+              <table class="hours-table">
+                <caption class="sr-only">Horario semanal de Alba Café</caption>
+                <tbody>
+                  <tr><th scope="row">Lunes a viernes</th><td>6:00 a.m.–8:00 p.m.</td></tr>
+                  <tr><th scope="row">Sábado</th><td>7:00 a.m.–6:00 p.m.</td></tr>
+                  <tr>
+                    <th scope="row">Domingo</th>
+                    <td><span class="closed-label">Cerrado</span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="hours-note">Los horarios pueden variar en días festivos.</p>
+              <a class="text-link"
+                href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+                target="_blank" rel="noopener noreferrer">
+                Consultar ficha en Google Maps ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-highlights" aria-label="Información destacada">
+          <div>
+            <span class="highlight-number">01</span>
+            <h3>Estacionamiento gratuito</h3>
+            <p>En el lugar y en la calle, sujeto a disponibilidad.</p>
+          </div>
+          <div>
+            <span class="highlight-number">02</span>
+            <h3>Para venir en familia</h3>
+            <p>Espacio para grupos y sillas altas para los pequeños.</p>
+          </div>
+          <div>
+            <span class="highlight-number">03</span>
+            <h3>Tu perro también</h3>
+            <p>Se permiten perros en las áreas exteriores.</p>
+          </div>
+        </div>
+
+        <div class="services-layout">
+          <div class="services-heading">
+            <span class="eyebrow">Antes de venir</span>
+            <h2>Una visita<br>a tu manera.</h2>
+            <p>Consulta las opciones del local, las comodidades y las formas de pago.</p>
+          </div>
+
+          <div class="services-accordion">
+            <details class="service-detail" name="servicios-alba" open>
+              <summary>
+                <span>Cómo disfrutar Alba</span>
+                <span class="detail-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="detail-content">
+                <ul class="service-list">
+                  <li>Consumo y atención en el local</li>
+                  <li>Servicio a la mesa</li>
+                  <li>Asientos al aire libre</li>
+                  <li>Para llevar</li>
+                  <li>Pedidos desde el automóvil</li>
+                  <li>Entrega a domicilio</li>
+                </ul>
+                <p class="detail-note">
+                  Consulta directamente con el local cómo realizar pedidos,
+                  la zona de entrega y los costos aplicables.
+                </p>
+              </div>
+            </details>
+
+            <details class="service-detail" name="servicios-alba">
+              <summary>
+                <span>Comida y ocasiones</span>
+                <span class="detail-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="detail-content">
+                <ul class="service-list">
+                  <li>Café y selección de té</li>
+                  <li>Bocadillos y comida preparada</li>
+                  <li>Desayunos y desayuno-almuerzo</li>
+                  <li>Almuerzo y cena</li>
+                  <li>Postres</li>
+                  <li>Servicio de catering</li>
+                </ul>
+                <p class="detail-note">
+                  Para catering, consulta disponibilidad,
+                  anticipación y opciones directamente con el local.
+                </p>
+              </div>
+            </details>
+
+            <details class="service-detail" name="servicios-alba">
+              <summary>
+                <span>Espacio, familias y mascotas</span>
+                <span class="detail-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="detail-content">
+                <ul class="service-list">
+                  <li>Ambiente agradable, informal y relajado</li>
+                  <li>Espacio con asientos</li>
+                  <li>Para visitas a solas o en grupo</li>
+                  <li>Opciones para venir en familia</li>
+                  <li>Niños bienvenidos y sillas altas</li>
+                  <li>Sanitario</li>
+                  <li>Perros permitidos únicamente afuera</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="service-detail" name="servicios-alba">
+              <summary>
+                <span>Pagos y estacionamiento</span>
+                <span class="detail-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="detail-content">
+                <h3 class="detail-subtitle">Formas de pago</h3>
+                <ul class="service-list">
+                  <li>Tarjetas de crédito</li>
+                  <li>Tarjetas de débito</li>
+                  <li>Pagos móviles mediante NFC</li>
+                  <li>Pluxee</li>
+                </ul>
+                <h3 class="detail-subtitle">Dónde estacionarte</h3>
+                <ul class="service-list">
+                  <li>Estacionamiento gratuito en el lugar</li>
+                  <li>Estacionamiento gratuito en la calle</li>
+                </ul>
+                <p class="detail-note">Los espacios están sujetos a disponibilidad.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <p class="menu-disclaimer">
+          Horarios y servicios basados en la información proporcionada
+          de la ficha del negocio. Pendientes de validación con Alba Café.
+        </p>
+      </section>
+    </div>
+
+    <noscript>
+      <p class="wrap menu-disclaimer">
+        Activa JavaScript para utilizar la búsqueda, los filtros y el cambio de tema.
+      </p>
+    </noscript>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-invitation">
+        <div>
+          <span class="eyebrow">Siempre hay tiempo para una pausa</span>
+          <h2>El próximo café,<br><em>que sea en Alba.</em></h2>
+        </div>
+        <a class="footer-cta" href="#menu">
+          Descubre el menú
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="#inicio" aria-label="Alba Café, inicio">
+            <span class="logo-frame">
+              <img src="alba-logo.png" alt="Alba Café" width="1672" height="941">
+            </span>
+          </a>
+          <p>
+            Café, conversaciones y pequeños momentos.
+            Una buena pausa en Linda Vista.
+          </p>
+          <span class="footer-location-label">
+            Guadalupe · Nuevo León
+          </span>
+        </div>
+
+        <nav class="footer-column" aria-label="Navegación del pie de página">
+          <h3>Explora</h3>
+          <a href="#inicio">Inicio</a>
+          <a href="#menu" data-category-link="todos">Menú completo</a>
+          <a href="#menu" data-category-link="calientes">Bebidas calientes</a>
+          <a href="#menu" data-category-link="frios">Frappés</a>
+          <a href="#menu" data-category-link="cafe">Café para casa</a>
+          <a href="#ubicacion">Ubicación y servicios</a>
+        </nav>
+
+        <div class="footer-column">
+          <h3>Ven a visitarnos</h3>
+          <address>
+            Bella Vista 207, Linda Vista<br>
+            67123 Guadalupe,<br>
+            Nuevo León, México
+          </address>
+          <a class="footer-map-link"
+            href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+            target="_blank" rel="noopener noreferrer">
+            Cómo llegar ↗
+          </a>
+          <a
+            href="https://maps.app.goo.gl/V3nPNNisJyL9Gk1H9"
+            target="_blank" rel="noopener noreferrer">
+            Fotos y reseñas ↗
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Horarios</h3>
+          <dl class="footer-hours">
+            <div><dt>Lunes a viernes</dt><dd>6:00 a.m.–8:00 p.m.</dd></div>
+            <div><dt>Sábado</dt><dd>7:00 a.m.–6:00 p.m.</dd></div>
+            <div><dt>Domingo</dt><dd>Cerrado</dd></div>
+          </dl>
+          <p class="footer-hours-note">
+            Pueden variar en días festivos.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Alba Café · Propuesta independiente, sitio no oficial.</span>
+        <button id="back-to-top" class="back-to-top" type="button" hidden>
+          Volver arriba <span aria-hidden="true">↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // TEMA CLARO / OSCURO
+
+    const root = document.documentElement;
+    const themeButton = document.getElementById("theme-toggle");
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let manualTheme = false;
+
+    try {
+      const saved = localStorage.getItem("alba-theme");
+      manualTheme = saved === "dark" || saved === "light";
+    } catch {}
+
+    function applyTheme(theme, save = false) {
+      const dark = theme === "dark";
+      root.dataset.theme = dark ? "dark" : "light";
+
+      const label = dark ? "Activar modo claro" : "Activar modo oscuro";
+      themeButton.setAttribute("aria-label", label);
+      themeButton.title = label;
+      themeMeta.content = dark ? "#191b18" : "#f5efe5";
+
+      if (save) {
+        manualTheme = true;
+        try {
+          localStorage.setItem("alba-theme", root.dataset.theme);
+        } catch {}
+      }
+    }
+
+    themeButton.hidden = false;
+    applyTheme(root.dataset.theme || "light");
+
+    themeButton.addEventListener("click", () => {
+      applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true);
+    });
+
+    systemTheme.addEventListener("change", event => {
+      if (!manualTheme) applyTheme(event.matches ? "dark" : "light");
+    });
+
+    window.addEventListener("storage", event => {
+      if (event.key !== "alba-theme") return;
+
+      manualTheme = event.newValue === "dark" || event.newValue === "light";
+      applyTheme(
+        manualTheme ? event.newValue : systemTheme.matches ? "dark" : "light"
+      );
+    });
+
+    // MENÚ HAMBURGUESA
+
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const overlay = document.getElementById("nav-overlay");
+    const header = document.querySelector(".site-header");
+    const main = document.getElementById("contenido");
+    const footer = document.querySelector(".site-footer");
+    const mobileMedia = window.matchMedia("(max-width: 760px)");
+
+    let navigationOpen = false;
+
+    hamburger.hidden = false;
+    root.classList.add("navigation-ready");
+
+    function closeNavigation(restoreFocus = false) {
+      navigationOpen = false;
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Abrir navegación");
+
+      mobileMenu.hidden = true;
+      overlay.hidden = true;
+      document.body.classList.remove("nav-open");
+
+      main.inert = false;
+      footer.inert = false;
+
+      if (restoreFocus) hamburger.focus();
+    }
+
+    function openNavigation() {
+      if (!mobileMedia.matches) return;
+
+      navigationOpen = true;
+      hamburger.setAttribute("aria-expanded", "true");
+      hamburger.setAttribute("aria-label", "Cerrar navegación");
+
+      mobileMenu.hidden = false;
+      overlay.hidden = false;
+      document.body.classList.add("nav-open");
+
+      main.inert = true;
+      footer.inert = true;
+    }
+
+    hamburger.addEventListener("click", () => {
+      navigationOpen ? closeNavigation() : openNavigation();
+    });
+
+    overlay.addEventListener("click", () => closeNavigation(true));
+
+    header.addEventListener("click", event => {
+      if (event.target.closest("a") && navigationOpen) {
+        closeNavigation(true);
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && navigationOpen) {
+        closeNavigation(true);
+      }
+    });
+
+    mobileMedia.addEventListener("change", () => {
+      const focusWasInside = mobileMenu.contains(document.activeElement);
+      closeNavigation();
+
+      if (focusWasInside) {
+        document.querySelector(".desktop-nav a").focus();
+      }
+    });
+
+    // ACORDEÓN: UN SOLO APARTADO ABIERTO
+
+    document.querySelectorAll(".services-accordion").forEach(accordion => {
+      const panels = [...accordion.querySelectorAll(".service-detail")];
+
+      panels.forEach(panel => {
+        panel.querySelector("summary").addEventListener("click", () => {
+          if (panel.open) return;
+
+          panels.forEach(other => {
+            if (other !== panel) other.open = false;
+          });
+        });
+      });
+    });
+
+    // MENÚ DE PRODUCTOS
+
+    const views = [...document.querySelectorAll("[data-view]")];
+    const navLinks = [...document.querySelectorAll("[data-nav]")];
+    let filters = [...document.querySelectorAll("[data-filter]")];
+
+    const grid = document.getElementById("menu-grid");
+    let items = [...grid.querySelectorAll(".menu-item")];
+    const search = document.getElementById("menu-search");
+    const status = document.getElementById("menu-status");
+    const empty = document.getElementById("empty-state");
+    const reset = document.getElementById("reset-menu");
+    const moreContainer = document.getElementById("menu-more");
+    const moreButton = document.getElementById("toggle-products");
+    const moreLabel = document.getElementById("more-label");
+    const moreCaption = document.getElementById("more-caption");
+
+    const titles = { inicio: "Inicio", menu: "Menú", ubicacion: "Ubicación", galeria: "Galería" };
+    const categories = {
+      todos: "Todo",
+      calientes: "Calientes",
+      frios: "Frappés",
+      cafe: "Café para casa"
+    };
+
+    let category = "todos";
+    let expanded = false;
+    let busy = false;
+    let animationId = 0;
+    let animations = [];
+
+    function normalize(text) {
+      return text.normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase().trim();
+    }
+
+    function cancelAnimation() {
+      animationId++;
+      animations.forEach(animation => animation.cancel());
+      animations = [];
+      grid.style.removeProperty("height");
+      grid.classList.remove("is-animating");
+      grid.removeAttribute("aria-busy");
+      moreButton.disabled = false;
+      busy = false;
+    }
+
+    function animate(element, frames, options) {
+      const animation = element.animate(frames, options);
+      animations.push(animation);
+      return animation;
+    }
+
+    function wait(list) {
+      return Promise.allSettled(list.map(animation => animation.finished));
+    }
+
+    function renderMenu() {
+      const query = normalize(search.value);
+      const words = query.split(/\s+/).filter(Boolean);
+
+      const matches = items.filter(item => {
+        const categoryMatch =
+          category === "todos" || item.dataset.category === category;
+        const text = normalize(item.querySelector(".product-copy").textContent);
+        return categoryMatch && words.every(word => text.includes(word));
+      });
+
+      const preview = matches.filter(item => item.hasAttribute("data-preview"));
+      const canExpand =
+        category === "todos" && query === "" && matches.length > preview.length;
+
+      const visible = canExpand && !expanded ? preview : matches;
+      const visibleSet = new Set(visible);
+
+      items.forEach(item => { item.hidden = !visibleSet.has(item); });
+
+      filters.forEach(button => {
+        button.setAttribute(
+          "aria-pressed", String(button.dataset.filter === category)
+        );
+      });
+
+      const count = visible.length < matches.length
+        ? `${visible.length} de ${matches.length} productos`
+        : `${matches.length} ${matches.length === 1 ? "producto" : "productos"}`;
+
+      status.textContent = `${count} · ${categories[category]}` +
+        (query ? ` · “${search.value.trim()}”` : "");
+
+      empty.hidden = matches.length > 0;
+      moreContainer.hidden = !canExpand;
+      moreButton.setAttribute("aria-expanded", String(expanded));
+      moreLabel.textContent = expanded ? "Ver menos" : "Ver más productos";
+      moreCaption.textContent = expanded
+        ? "Ya estás viendo esta selección completa"
+        : `${matches.length - visible.length} opciones más por descubrir`;
+    }
+
+    function showView(focus = false) {
+      const hash = location.hash.slice(1);
+
+      if (hash === "contenido" && focus) {
+        main.focus();
+        return;
+      }
+
+      closeNavigation();
+      cancelAnimation();
+      renderMenu();
+
+      const name = Object.prototype.hasOwnProperty.call(titles, hash)
+        ? hash : "inicio";
+
+      views.forEach(view => { view.hidden = view.id !== name; });
+
+      navLinks.forEach(link => {
+        if (link.dataset.nav === name) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      document.title = `${titles[name]} | Alba Café`;
+
+      if (focus) {
+        document.getElementById(name).focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    }
+
+    function attachFilters() {
+      filters.forEach(button => button.addEventListener("click", () => {
+        cancelAnimation(); category = button.dataset.filter;
+        expanded = false; renderMenu();
+      }));
+    }
+    attachFilters();
+
+    search.addEventListener("input", () => {
+      cancelAnimation();
+      expanded = false;
+      renderMenu();
+    });
+
+    reset.addEventListener("click", () => {
+      cancelAnimation();
+      category = "todos";
+      expanded = false;
+      search.value = "";
+      renderMenu();
+      search.focus();
+    });
+
+    document.querySelectorAll("[data-category-link]").forEach(link => {
+      link.addEventListener("click", () => {
+        cancelAnimation();
+        category = link.dataset.categoryLink;
+        search.value = "";
+        expanded = false;
+        renderMenu();
+      });
+    });
+
+    // Permite volver arriba aunque el enlace apunte a la vista actual.
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", event => {
+        const target = link.getAttribute("href").slice(1);
+
+        if (Object.prototype.hasOwnProperty.call(titles, target) &&
+            location.hash === `#${target}`) {
+          event.preventDefault();
+          showView(true);
+        }
+      });
+    });
+
+    moreButton.addEventListener("click", async () => {
+      if (busy) return;
+
+      const opening = !expanded;
+      const extras = items.filter(item => !item.hasAttribute("data-preview"));
+
+      if (motion.matches || typeof grid.animate !== "function") {
+        expanded = opening;
+        renderMenu();
+
+        if (!opening) {
+          moreButton.scrollIntoView({ block: "nearest", behavior: "instant" });
+        }
+        return;
+      }
+
+      const currentAnimation = ++animationId;
+      const oldHeight = grid.getBoundingClientRect().height;
+
+      busy = true;
+      moreButton.disabled = true;
+      grid.setAttribute("aria-busy", "true");
+
+      try {
+        if (opening) {
+          expanded = true;
+          renderMenu();
+
+          const newHeight = grid.getBoundingClientRect().height;
+          grid.style.height = `${newHeight}px`;
+          grid.classList.add("is-animating");
+
+          const resize = animate(grid, [
+            { height: `${oldHeight}px` }, { height: `${newHeight}px` }
+          ], {
+            duration: 520,
+            easing: "cubic-bezier(.22,1,.36,1)",
+            fill: "both"
+          });
+
+          const cards = extras.map((item, index) =>
+            animate(item, [
+              { opacity: 0, transform: "translateY(18px) scale(.985)" },
+              { opacity: 1, transform: "translateY(0) scale(1)" }
+            ], {
+              duration: 380,
+              delay: 70 + Math.min(index * 32, 280),
+              easing: "cubic-bezier(.22,1,.36,1)",
+              fill: "both"
+            })
+          );
+
+          await wait([resize, ...cards]);
+        } else {
+          const cards = extras.filter(item => !item.hidden).map((item, index) =>
+            animate(item, [
+              { opacity: 1, transform: "translateY(0)" },
+              { opacity: 0, transform: "translateY(-8px)" }
+            ], {
+              duration: 180,
+              delay: Math.min(index * 12, 100),
+              easing: "ease-in",
+              fill: "both"
+            })
+          );
+
+          await wait(cards);
+          if (currentAnimation !== animationId) return;
+
+          expanded = false;
+          renderMenu();
+
+          const newHeight = grid.getBoundingClientRect().height;
+          grid.style.height = `${newHeight}px`;
+          grid.classList.add("is-animating");
+
+          const resize = animate(grid, [
+            { height: `${oldHeight}px` }, { height: `${newHeight}px` }
+          ], {
+            duration: 420,
+            easing: "cubic-bezier(.22,1,.36,1)",
+            fill: "both"
+          });
+
+          await wait([resize]);
+        }
+      } finally {
+        if (currentAnimation === animationId) {
+          cancelAnimation();
+          renderMenu();
+
+          if (!opening && !document.getElementById("menu").hidden) {
+            moreButton.scrollIntoView({
+              block: "nearest",
+              behavior: motion.matches ? "instant" : "smooth"
+            });
+          }
+        }
+      }
+    });
+
+    const backToTop = document.getElementById("back-to-top");
+    backToTop.hidden = false;
+
+    backToTop.addEventListener("click", () => {
+      const current = views.find(view => !view.hidden);
+      if (current) current.focus({ preventScroll: true });
+
+      window.scrollTo({
+        top: 0,
+        behavior: motion.matches ? "instant" : "smooth"
+      });
+    });
+
+    window.addEventListener("hashchange", () => showView(true));
+
+    window.addEventListener("resize", () => {
+      if (busy) {
+        cancelAnimation();
+        renderMenu();
+      }
+    });
+
+    motion.addEventListener("change", () => {
+      cancelAnimation();
+      renderMenu();
+    });
+
+    document.getElementById("menu-tools").hidden = false;
+
+    // Etapa 3: contenido publicado desde Supabase.
+    const albaDB = window.supabase.createClient(ALBA_URL, ALBA_KEY);
+    const albaEsc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const albaImage = path => path ? albaDB.storage.from('alba-media').getPublicUrl(path).data.publicUrl : '';
+    async function loadAlbaContent() {
+      const [cats,prods,settings,photos,offers] = await Promise.all([
+        albaDB.from('alba_categories').select('*').eq('active',true).order('sort_order'),
+        albaDB.from('alba_products').select('*').eq('visible',true).order('sort_order'),
+        albaDB.from('alba_settings').select('key,value'),
+        albaDB.from('alba_gallery').select('*').eq('published',true).order('created_at',{ascending:false}),
+        albaDB.from('alba_offers').select('*').eq('published',true).order('created_at',{ascending:false})
+      ]);
+      if(!cats.error && !prods.error && cats.data && prods.data) {
+        const map = Object.fromEntries(cats.data.map(c=>[c.slug,c.name]));
+        Object.keys(categories).forEach(k=>{if(k!=='todos')delete categories[k]});
+        Object.assign(categories,map);
+        const filterBox = document.querySelector('.filters');
+        filterBox.replaceChildren();
+        for(const [slug,label] of Object.entries({todos:'Todo',...map})) {
+          const b=document.createElement('button');b.className='filter';b.type='button';b.dataset.filter=slug;b.setAttribute('aria-pressed',String(category===slug));b.setAttribute('aria-controls','menu-grid');b.textContent=label;filterBox.appendChild(b);
+        }
+        filters=[...filterBox.querySelectorAll('[data-filter]')];attachFilters();
+        const now=Date.now();
+        const activeOffers=(offers.error?[]:(offers.data||[])).filter(o=>(!o.starts_at||Date.parse(o.starts_at)<=now)&&(!o.ends_at||Date.parse(o.ends_at)>=now));
+        const bestOffer=item=>activeOffers.filter(o=>o.kind!=='combo'&&(o.product_ids||[]).includes(item.id)).map(o=>({offer:o,price:o.kind==='percent'?item.price*(1-o.amount/100):o.kind==='fixed'?item.price-o.amount:o.amount})).filter(o=>o.price>=0&&o.price<item.price).sort((a,b)=>a.price-b.price)[0];
+        const promoBox=document.getElementById('alba-offers');
+        promoBox.innerHTML=activeOffers.length?'<h2>Ofertas especiales</h2><div class="alba-offers-grid">'+activeOffers.map(o=>`<article class="alba-offer-card">${o.image_path?`<img src="${albaEsc(albaImage(o.image_path))}" alt="" loading="lazy">`:''}<div><span class="alba-offer-label">PROMOCIÓN</span><h3>${albaEsc(o.title)}</h3><p>${albaEsc(o.description||'')}</p>${o.coupon_code?`<small>Código: ${albaEsc(o.coupon_code)}</small>`:''}</div></article>`).join('')+'</div>':'';
+        grid.innerHTML=prods.data.map((item,i)=>`<article class="menu-item" data-category="${albaEsc(item.category_slug)}" ${i<6?'data-preview':''}>${item.image_path?`<img class="alba-product-img" src="${albaEsc(albaImage(item.image_path))}" alt="" loading="lazy">`:''}<div class="product-copy"><span class="product-category">${albaEsc(map[item.category_slug]||item.category_slug)}</span><h3>${albaEsc(item.name)}</h3><p>${albaEsc(item.description||'')}${item.available===false?' · Agotado':''}</p></div><span class="price">${bestOffer(item)?`<small class="alba-old-price">$${Number(item.price).toLocaleString('es-MX')}</small><strong>$${Number(bestOffer(item).price).toLocaleString('es-MX',{maximumFractionDigits:2})}</strong><small class="alba-offer-label">OFERTA</small>`:`$${Number(item.price).toLocaleString('es-MX')}`}</span></article>`).join('');
+        items=[...grid.querySelectorAll('.menu-item')];if(!map[category]&&category!=='todos')category='todos';cancelAnimation();renderMenu();
+      } else console.warn('Menú remoto no disponible; se conserva el menú original.',cats.error||prods.error);
+      if(!settings.error && settings.data) {
+        const v=Object.fromEntries(settings.data.map(x=>[x.key,x.value]));
+        const set=(selector,value)=>{const el=document.querySelector(selector);if(el&&typeof value==='string')el.textContent=value};
+        set('#inicio-title',v.hero_title);set('.hero-description',v.hero_description);set('#about-title',v.about_title);set('.about-copy p',v.about_description);
+        const address=document.querySelector('address');if(address&&v.address)address.textContent=v.address;
+        const mapURL=typeof v.maps_url==='string'&&/^https:\/\//.test(v.maps_url)?v.maps_url:null;
+        if(mapURL)document.querySelectorAll('a[href*="maps.app.goo.gl"]').forEach(a=>a.href=mapURL);
+        if(v.hours_weekdays)set('.hours-table tr:nth-child(1) td',v.hours_weekdays);
+        if(v.hours_saturday)set('.hours-table tr:nth-child(2) td',v.hours_saturday);
+        if(v.hours_sunday)set('.hours-table tr:nth-child(3) td',v.hours_sunday);
+      }
+      const gallery=document.getElementById('alba-gallery-grid');const msg=document.getElementById('alba-gallery-status');
+      if(photos.error){msg.textContent='No fue posible cargar la galería.';return;}
+      gallery.innerHTML=(photos.data||[]).map(x=>`<article class="alba-gallery-card"><img src="${albaEsc(albaImage(x.image_path))}" alt="${albaEsc(x.title)}" loading="lazy"><div><h3>${albaEsc(x.title)}</h3><p>${albaEsc(x.description||'')}</p></div></article>`).join('');
+      msg.textContent=photos.data.length?'': 'Próximamente compartiremos fotografías.';
+    }
+    loadAlbaContent().catch(console.error);
+
+    showView();
+  </script>
+</body>
+</html>
